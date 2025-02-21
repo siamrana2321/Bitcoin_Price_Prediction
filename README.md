@@ -14,3 +14,16 @@ This project uses historical Bitcoin price data to predict future closing prices
 - 🔍 Easy-to-use function for testing new data inputs
 
 ---
+
+## 📂 Dataset
+
+The dataset used in this project includes historical Bitcoin market data, including:
+- **Open** price
+- **High** price
+- **Low** price
+- **Close** price
+- **Volume**
+- Moving Averages (7-day, 25-day)
+- Volatility Index
+
+---
