@@ -27,3 +27,10 @@ The dataset used in this project includes historical Bitcoin market data, includ
 - Volatility Index
 
 ---
+
+## 🔧 Installation
+
+- Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/bitcoin-price-prediction.git
+   cd bitcoin-price-prediction
