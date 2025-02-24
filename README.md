@@ -32,5 +32,8 @@ The dataset used in this project includes historical Bitcoin market data, includ
 
 - Clone the repository:
    ```bash
-   git clone https://github.com/your-username/bitcoin-price-prediction.git
-   cd bitcoin-price-prediction
+   git clone https://github.com/siamrana2321/Bitcoin_Price_Prediction.git
+
+![image](https://github.com/user-attachments/assets/3a7bbe41-a98d-4996-af9a-0803dd6f34cd)
+
+
