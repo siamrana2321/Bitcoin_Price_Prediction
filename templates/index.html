@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Price Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Bitcoin Price Prediction</h1>
+        <form action="/predict" method="POST" class="mt-4" id="predictionForm">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="Open" class="form-label">Open Price</label>
+                        <input type="number" step="0.01" class="form-control" id="Open" name="Open" value="{{ request.form.Open }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="High" class="form-label">High Price</label>
+                        <input type="number" step="0.01" class="form-control" id="High" name="High" value="{{ request.form.High }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Low" class="form-label">Low Price</label>
+                        <input type="number" step="0.01" class="form-control" id="Low" name="Low" value="{{ request.form.Low }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Volume" class="form-label">Volume</label>
+                        <input type="number" step="0.01" class="form-control" id="Volume" name="Volume" value="{{ request.form.Volume }}" required>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="7-day-MA" class="form-label">7-day Moving Average</label>
+                        <input type="number" step="0.01" class="form-control" id="7-day-MA" name="7-day-MA" value="{{ request.form['7-day-MA'] }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="25-day-MA" class="form-label">25-day Moving Average</label>
+                        <input type="number" step="0.01" class="form-control" id="25-day-MA" name="25-day-MA" value="{{ request.form['25-day-MA'] }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Volatility_Index" class="form-label">Volatility Index</label>
+                        <input type="number" step="0.01" class="form-control" id="Volatility_Index" name="Volatility_Index" value="{{ request.form.Volatility_Index }}" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center mt-3">
+                <button type="submit" class="btn btn-primary me-2">Predict</button>
+            </div>
+        </form>
+
+        {% if prediction_text %}
+        <div class="mt-4 alert alert-success">
+            {{ prediction_text }}
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
